@@ -2,13 +2,14 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven 3.8.1' // Make sure this is configured in Jenkins → Global Tool Configuration
+        maven 'Maven 3.8.1'
     }
 
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/shashank485/newhello-world.git'
+                git branch: 'main',
+                    url: 'https://github.com/shashank485/newhello-world.git'
             }
         }
 
