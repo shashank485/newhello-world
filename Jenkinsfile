@@ -1,9 +1,7 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven 3.8.1'
-    }
+    sh '/usr/bin/mvn clean package'
 
     stages {
         stage('Checkout') {
